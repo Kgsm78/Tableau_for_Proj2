@@ -1,0 +1,26 @@
+---
+title: "My Project2 plots in Tableau"
+author: "kgsm78"
+date: "Friday, January 16, 2015"
+output: html_document
+---
+
+I'm just as much a newbie to Tableau as I am to R.   So, as a learning exercise, I created the Project2 plots in Tableau.  
+
+While there is an interface between Tableau and R, I didn't get into that.   Instead, I simply saved the RDS files as csv files and imported them to Tableau from there.  
+
+write.csv(SCC, file = "SCC.csv",
+          row.names = FALSE)
+NEI <- readRDS("summarySCC_PM25.rds")
+write.csv(NEI, file = "NEI.csv",
+          row.names = FALSE)
+
+Initially, when I was building the plots in Tableau, I imported a randomly selected subset of NEI in order to speed up the process.   Then, I replaced my NEI.csv file with the full file, and updated the extracted file in Tableau.  It loaded suprisingly quickly.  
+
+The plots are in the pdfs---sorry, don't have Adobe Pro, so couldn't place all in one document.  I've also posted my Tableau workbook.   If you don't have Tableau (trial subscription is available for free), you can download the Tableau reader so that you can open and look at my viz, but you can't edit.  
+
+My only discrepancy from R work is Plot 4--- there is a difference in how the wild card operates when searching for "coal" or "Coal".  I got more hits in Tableau than I did in R.  
+
+I'm going up the learning curve in Tableau, so I'm not totally efficient with it. That said, it took me far less time (about 2 hours) to do this in Tableau than to write the code for my plots in R.  
+
+
